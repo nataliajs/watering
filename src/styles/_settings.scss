@@ -1,0 +1,64 @@
+$ff_heading: 'Fira Sans', sans-serif;
+$ff_body: 'Open Sans', sans-serif;
+
+/** FONT SIZES **/
+$s_base: 17;
+$s_small: 14;
+$s_small-medium: 15;
+$s_medium: 21;
+$s_large: 28;
+$s_extra_large: 30;
+
+/** LINE HEIGHT **/
+$lh_base: 27;
+$lh_small: 24;
+$lh_small-medium: 25;
+$lh_medium: 31;
+$lh_large: 38;
+
+$leading: $s_base;
+
+$rem_base: $s_base;
+
+/** COLORS **/
+$c_base: #1d4e89;
+$c_base_soft: lighten($c_base, 20%);
+$c_base_medium: lighten($c_base, 40%);
+$c_base_light: lighten($c_base, 60%);
+
+$c_inverse: #fffffa;
+
+$c_main: #67aa95;
+$c_main_deep: darken($c_main, 60%);
+$c_main_dark: darken($c_main, 20%);
+$c_main_soft: lighten($c_main, 20%);
+$c_main_medium: lighten($c_main, 40%);
+$c_main_light: lighten($c_main, 60%);
+
+$c_secondary: #f79256;
+$c_secondary_soft: lighten($c_secondary, 6%);
+$c_secondary_medium: #fbd1a2;
+$c_secondary_light: lighten($c_secondary_medium, 10%);
+
+$c_highlight: #00b2ca;
+$c_font: $c_main_deep;
+
+/** MIXINS: FONTS **/
+@mixin body {
+  font-family: $ff_body;
+  color: $c_font;
+  font-size: rem($s_base);
+  line-height: rem($lh_base);
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/** FUNCTIONS **/
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($px, $countbase: $rem_base) {
+  @return strip-unit($px) / $countbase + 0rem;
+}

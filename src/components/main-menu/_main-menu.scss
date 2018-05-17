@@ -1,0 +1,29 @@
+.main-menu{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 200px;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 100px;
+  bottom: 0;
+  background-color: $c_main;
+  &_item{
+    padding: rem($leading);
+    background-color: $c_main;
+    border-bottom: 1px solid $c_main_dark;
+    text-align: center;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    &:first-child{
+      padding-top: rem($leading*2);
+    }
+    &--active{
+      background-color: $c_main_medium;
+      font-weight: 600;
+    }
+  }
+}

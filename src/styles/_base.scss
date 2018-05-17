@@ -1,0 +1,20 @@
+body{
+  background-color: $c_inverse;
+}
+
+html,
+body,
+li,
+ul,
+div,
+p,
+a,
+ol {
+  @include body;
+}
+
+svg{
+  height: rem($s_base*2);
+  width: rem($s_base*2);
+  color: $c_secondary;
+}

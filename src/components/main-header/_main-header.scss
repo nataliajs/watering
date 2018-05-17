@@ -1,0 +1,19 @@
+.main-header{
+  height: 100px;
+  background-color: $c_base;
+  display: flex;
+  align-items: center;
+  &_item{
+    padding-left: rem($leading*0.8);
+    color: $c_secondary_medium;
+    svg{
+      fill: $c_secondary_medium;
+    }
+    &--active{
+      color: $c_secondary;
+      svg{
+        fill: $c_secondary;
+      }
+    }
+  }
+}
