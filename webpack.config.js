@@ -24,7 +24,7 @@ module.exports = {
         loader: "babel-loader",
         options: {
           presets: ['react', 'stage-3'],
-        //  plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties'],
+          plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties'],
         },
       },
       {
