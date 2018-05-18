@@ -8,6 +8,10 @@ var CONTACTS_COLLECTION = "contacts";
 var app = express();
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('dist'));
+}
+
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
