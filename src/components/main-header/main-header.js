@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { ICONS } from 'constants/svg'
+import { ICONS } from 'img/svg'
 
 import Icon from 'components/icon'
 

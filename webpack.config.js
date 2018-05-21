@@ -12,7 +12,8 @@ module.exports = {
     alias: {
       components: path.join(__dirname, 'src', 'components'),
       templates: path.join(__dirname, 'src', 'templates'),
-      constants: path.join(__dirname, 'src', 'constants'),
+      img: path.join(__dirname, 'src', 'img'),
+      api: path.join(__dirname, 'src', 'api'),
     }
   },
   mode: 'development',
