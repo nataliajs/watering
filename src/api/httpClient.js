@@ -7,7 +7,8 @@ export const getInstance = function(timeout = 30000) {
     timeout: timeout,
     headers: {
       "Access-Control-Allow-Origin": '*',
-      'Access-Control-Allow-Methods': 'POST,GET,PUT,DELETE'
+      'Access-Control-Allow-Methods': 'POST,GET,PUT,DELETE',
+      'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
     },
   }
 
