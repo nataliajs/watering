@@ -1,0 +1,18 @@
+.button{
+  @include button-text;
+  a {
+    @include button-text;
+    text-decoration: none;
+  }
+  display: block;
+  padding: rem(15) rem($alpha_gutter);
+  width: auto;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  background-color: $c_secondary_medium;
+  border: none;
+  color: $c_inverse;
+  &:hover{
+    background-color: $c_secondary;
+  }
+}

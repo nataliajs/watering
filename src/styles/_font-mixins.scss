@@ -1,0 +1,78 @@
+/** MIXINS: FONTS **/
+@mixin body {
+  font-family: $ff_body;
+  color: $c_font;
+  font-size: rem($s_base);
+  line-height: rem($lh_base);
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin small-body {
+  font-family: $ff_body;
+  color: $c_font;
+  font-size: rem($s_small);
+  line-height: rem($lh_small);
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin heading($style: bold) {
+  font-size: rem($s_large);
+  line-height: rem($lh_medium);
+  @media (min-width: $beta_query) {
+    font-size: rem($s_extra_large);
+    line-height: rem($lh_large);
+  }
+  @if $style == 'bold' {
+    font-family: $ff_heading;
+  }
+  margin-bottom: rem($leading);
+  margin-top: rem($leading);
+  color: $c_font;
+  font-weight: 600;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin sub-heading {
+  font-family: $ff_body;
+  font-weight: 600;
+  font-size: rem($s_base);
+  line-height: rem($lh_base);
+  margin-top: rem($leading * 2);
+  margin-bottom: rem($leading * 0.5);
+  color: $c_font;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin intro-subheading {
+  font-size: rem($s_base);
+  line-height: rem($lh_base);
+  @media (min-width: $beta_query) {
+    font-size: rem($s_medium);
+    line-height: rem($lh_medium);
+  }
+  font-family: $ff_body;
+  font-weight: 500;
+  margin-bottom: rem($leading * 0.8);
+  color: $c_base;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin button-text {
+  text-decoration: none;
+  font-family: $ff_body;
+  font-weight: 700;
+  font-size: rem($s_small);
+  line-height: rem($lh_small);
+  color: $c_base;
+  text-align: center;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

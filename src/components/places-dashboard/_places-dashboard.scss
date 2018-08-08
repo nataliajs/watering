@@ -1,0 +1,27 @@
+.places-dashboard{
+
+  &_list{
+  }
+}
+
+.place-intro{
+  background-color: $c_secondary_soft;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid $c_secondary;
+  box-shadow: $shadow_small_bottom;
+  height: rem($leading*6);
+  position: relative;
+  margin: rem($leading*2);
+  &_name{
+    @include intro-subheading;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:hover{
+      font-weight: 500;
+    }
+  }
+}

@@ -1,8 +1,13 @@
 @import './reset';
 @import './settings';
-@import './simple-grid';
+@import './layout';
+@import './font-mixins';
 @import './base';
+@import './actions';
 
 //COMPONENTS
 @import '../components/main-menu/main-menu';
 @import '../components/main-header/main-header';
+@import '../components/places-dashboard/places-dashboard';
+@import '../components/toggle-element/toggle-element';
+@import '../components/new-place/new-place';
