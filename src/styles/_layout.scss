@@ -95,7 +95,7 @@ $spanwidth-12: 100%;
 // ALPHA
 //==============================================================================================================
 .main-container{
-  margin-left: 150px;
+  margin-left: $w_main_vertical_menu;
   padding: rem($leading*3);
 }
 

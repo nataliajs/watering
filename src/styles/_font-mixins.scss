@@ -4,7 +4,7 @@
   color: $c_font;
   font-size: rem($s_base);
   line-height: rem($lh_base);
-  font-weight: 400;
+  font-weight: $fw_regular;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -14,7 +14,7 @@
   color: $c_font;
   font-size: rem($s_small);
   line-height: rem($lh_small);
-  font-weight: 400;
+  font-weight: $fw_regular;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,18 +32,18 @@
   margin-bottom: rem($leading);
   margin-top: rem($leading);
   color: $c_font;
-  font-weight: 600;
+  font-weight: $fw_semi-bold;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 @mixin sub-heading {
   font-family: $ff_body;
-  font-weight: 600;
+  font-weight: $fw_semi-bold;
   font-size: rem($s_base);
   line-height: rem($lh_base);
-  margin-top: rem($leading * 2);
-  margin-bottom: rem($leading * 0.5);
+  //margin-top: rem($leading * 2);
+  //margin-bottom: rem($leading * 0.5);
   color: $c_font;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -57,7 +57,7 @@
     line-height: rem($lh_medium);
   }
   font-family: $ff_body;
-  font-weight: 500;
+  font-weight: $fw_semi-bold;
   margin-bottom: rem($leading * 0.8);
   color: $c_base;
   -moz-osx-font-smoothing: grayscale;
@@ -67,12 +67,22 @@
 @mixin button-text {
   text-decoration: none;
   font-family: $ff_body;
-  font-weight: 700;
+  font-weight: $fw_bold;
   font-size: rem($s_small);
   line-height: rem($lh_small);
   color: $c_base;
   text-align: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
 
+@mixin label{
+  font-size: rem($xs_small);
+  line-height: rem($lh_xs_small);
+  font-family: $ff_body;
+  color: $c_main_dark;
+  text-transform: uppercase;
+  font-weight: $fw_bold;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }

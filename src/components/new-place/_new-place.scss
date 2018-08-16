@@ -1,4 +1,10 @@
 .new-place{
-  background-color: $c_secondary_medium;
+  background-color: $c_secondary_light;  
   padding: rem($leading*1.5);
+  &__submit{
+    margin: rem($leading*1.5) 0 0 0;
+    &__button{
+        @extend .button-plus;              
+      }
+  }
 }

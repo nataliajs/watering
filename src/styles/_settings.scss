@@ -1,16 +1,22 @@
 $ff_heading: 'Fira Sans', sans-serif;
 $ff_body: 'Open Sans', sans-serif;
 
-/** FONT SIZES **/
+/**
+* FONT SIZES 
+**/
 $s_base: 17;
+$xs_small: 12;
 $s_small: 14;
 $s_small-medium: 15;
 $s_medium: 21;
 $s_large: 28;
 $s_extra_large: 30;
 
-/** LINE HEIGHT **/
+/**
+* LINE HEIGHT 
+**/
 $lh_base: 27;
+$lh_xs_small: 20;
 $lh_small: 24;
 $lh_small-medium: 25;
 $lh_medium: 31;
@@ -20,7 +26,17 @@ $leading: $s_base;
 
 $rem_base: $s_base;
 
-/** COLORS **/
+/**
+* FONT WEIGHTS 
+**/ 
+$fw_regular: 400;
+$fw_semi-bold: 600;
+$fw-bold: 700;
+$fw_extra-bold: 900;
+
+/**
+* COLORS 
+**/
 //blue
 $c_base: #1d4e89;
 $c_base_soft: lighten($c_base, 20%);
@@ -31,32 +47,55 @@ $c_inverse: #fffffa;
 
 //green
 $c_main: #67aa95;
-$c_main_deep: darken($c_main, 60%);
-$c_main_dark: darken($c_main, 20%);
+
+$c_main_deep: darken($c_main, 30%);
+$c_main_dark: darken($c_main, 10%);
+
 $c_main_soft: lighten($c_main, 20%);
+$c_main_soft-medium: lighten($c_main, 30%);
 $c_main_medium: lighten($c_main, 40%);
 $c_main_light: lighten($c_main, 60%);
 
 //orange
 $c_secondary: #f79256;
 $c_secondary_soft: lighten($c_secondary, 6%);
+$c_secondary_soft-medium: lighten($c_secondary, 20%);
 $c_secondary_medium: #fbd1a2;
 $c_secondary_light: lighten($c_secondary_medium, 10%);
 
 $c_highlight: #00b2ca;
 $c_font: $c_main_deep;
 
-//borders
-$border-light: 1px solid $c_base_medium;
+/**
+* WIDTHS
+**/
+$w_main_vertical_menu: 200px;
+
+/**
+* HEIGHTS
+**/
+$h_main-header: 80px;
+
+/**
+* BORDERS
+**/
+$border-inverse: 1px solid $c_inverse;
+$border-light: 1px solid $c_secondary_soft;
+$border-soft: 1px solid $c_secondary_soft-medium;
+$border-medium: 1px solid $c_main_dark;
 $border-dark: 1px solid $c_base;
 
-//shadows
+/**
+* SHADOWS
+**/
 $shadow_medium_bottom: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
 $shadow_small_bottom: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 $shadow_inner: inset 0 -5px 5px 0 rgba(0, 0, 0, 0.15);
 
 
-/** FUNCTIONS **/
+/**
+* FUNCTIONS 
+**/
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }

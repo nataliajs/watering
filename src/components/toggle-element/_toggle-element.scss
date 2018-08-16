@@ -2,18 +2,21 @@
   &_button{
     @extend .button;
   }
-  &_container{
+  &_container{    
     height: 100%;
     max-height: 0px;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+    transition: max-height 1s ease-out, opacity 0.5s ease-out;
   }
   &--active{
     .toggle-element_container{
+      box-shadow: $shadow_small_bottom;
+      border-radius: 4px;
+      background-color: $c_inverse;
       opacity: 1;
       max-height: 1000px;
-      transition: max-height 0.5s ease-out, opacity 0.3s ease-out;      
+      transition: max-height 1s ease-out, opacity 0.3s ease-out;      
     }
   }
 }

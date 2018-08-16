@@ -22,7 +22,6 @@ class ToggleElement extends React.Component {
     return(
       <div className={toggleClass}>
         <div className="toggle-element_button" onClick={ this.handleOnClick }>
-          +
           { this.props.buttonLabel ? this.props.buttonLabel: 'Add' }
         </div>
         <div className="toggle-element_container">

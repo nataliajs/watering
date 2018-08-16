@@ -1,9 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import * as R from 'ramda'
 
 import ToggleElement from 'components/toggle-element/toggle-element'
-import NewPlace from 'components/new-place/new-place'
+import NewPlaceContainer from 'components/new-place/new-place.container'
 
 
 class PlacesDashboard extends React.Component {
@@ -27,7 +26,7 @@ class PlacesDashboard extends React.Component {
         </div>
         <div className="l-row places-dashboard_add">
           <ToggleElement buttonLabel="Add place">
-            <NewPlace />
+            <NewPlaceContainer />
           </ToggleElement>
         </div>
       </div>

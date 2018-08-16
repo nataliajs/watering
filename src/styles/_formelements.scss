@@ -1,0 +1,68 @@
+.form-lineup{
+  &_form-row {
+    display: flex;
+    flex-flow: wrap;
+    margin-right: 0;
+    @media screen and (min-width: $beta_query) {
+      flex-flow: nowrap;
+    }
+    .form-lineup_form-group {
+      width: 100%;
+      @media screen and (min-width: $beta_query) {
+        flex-grow: 1;
+        margin-right: rem($leading * 2);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &_form-group {
+    margin-bottom: rem($leading);
+    &_label {
+      @include label;
+      display: flex;
+      align-items: center;
+      .svg-icon {
+        width: rem(15);
+        height: rem(15);
+        margin-right: rem($leading * 0.7);
+        top: 0;
+        line-height: rem($lh_base);
+      }
+    }
+  }
+}
+
+.inputfield{
+  &--label{
+    @include label;
+  }
+  &--text,
+  &--textarea {    
+    @include body;
+    width: 100%;
+    border-bottom: $border-light;
+    &:focus{
+      border-bottom: $border-medium;
+    }
+  }
+}
+
+.button{
+  &-plus{
+    font-size: rem($s_large);
+    line-height: 0rem;
+    text-align: center;
+    vertical-align: top;
+    color: $c_secondary_soft-medium;
+    border: $border-soft;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    &:hover{
+      color: $c_secondary_soft;
+      border: $border-light;
+    }
+  }
+}

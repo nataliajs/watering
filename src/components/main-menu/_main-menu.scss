@@ -2,28 +2,32 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 200px;
+  width: $w_main_vertical_menu;
   height: 100vh;
   left: 0;
   position: fixed;
-  top: 100px;
+  top: $h_main-header;
   bottom: 0;
   background-color: $c_main;
+  border-right: $border-medium;
   &_item{
-    padding: rem($leading);
+    @include sub-heading;
+    font-weight: $fw_regular;
+    padding: rem($leading*1.5);
     background-color: $c_main;
-    border-bottom: 1px solid $c_main_dark;
+    border-bottom: $border-medium;
     text-align: center;
     width: 100%;
     width: -moz-available;
     width: -webkit-fill-available;
     width: fill-available;
-    &:first-child{
-      padding-top: rem($leading*2);
+    text-transform: capitalize;
+    &:hover{
+      background-color: $c_main_soft;
     }
-    &--active{
-      background-color: $c_main_medium;
-      font-weight: 600;
+    &--active{      
+      background-color: $c_main_soft-medium;
+      font-weight: $fw-bold;
     }
   }
 }
