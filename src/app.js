@@ -6,17 +6,12 @@ import { routerReducer } from 'react-router-redux'
 
 import reducers from 'reducers/index'
 
+import store from 'store'
 import HomeTemplate from 'templates/home-template'
 import PlacesTemplate from 'templates/places-template'
 import ErrorPage from 'templates/error-page'
 import UserTemplate from 'templates/user-template'
 
-const store = createStore(
-  combineReducers({
-    ...reducers,
-    routing: routerReducer
-  })
-)
 
 class App extends React.Component {
   render() {

@@ -1,5 +1,5 @@
-//import * as types from 'actions/action-types'
-import { WAITING, LOADING, ERROR, SUCCESS } from '../utils/common/constants/network-states'
+import * as types from 'actions/action-types'
+import { WAITING, LOADING, ERROR, SUCCESS } from 'utils/constants'
 
 const initialState = {
   places: [], //list of places (id , name and description)

@@ -30,6 +30,8 @@ const places = [
     plantIds: [],
   },
 ];
+
+
 export function getPlaces() {
   const client = httpClient.getInstance()
   return new Promise((resolve, reject) => {
@@ -45,7 +47,6 @@ export function getPlaces() {
         reject(error)
       })
   })
-  //return places;
 }
 
 export function setPlace( place ) {

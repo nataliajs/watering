@@ -14,6 +14,8 @@ module.exports = {
       templates: path.join(__dirname, 'src', 'templates'),
       reducers: path.join(__dirname, 'src', 'reducers'),
       actions: path.join(__dirname, 'src', 'actions'),
+      store: path.join(__dirname, 'src', 'store'),
+      utils: path.join(__dirname, 'src', 'utils'),
       img: path.join(__dirname, 'src', 'img'),
       api: path.join(__dirname, 'src', 'api'),
     }
@@ -27,7 +29,6 @@ module.exports = {
         loader: "babel-loader",
         options: {
           presets: ['react', 'stage-3'],
-        //  plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties'],
         },
       },
       {
@@ -44,6 +45,7 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist",
-    historyApiFallback: true,
+    port: 8080,
+    historyApiFallback: true
   },
 };

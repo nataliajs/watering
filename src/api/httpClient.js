@@ -1,5 +1,5 @@
 import axios from 'axios'
-import * as constants from '../constants'
+import * as constants from 'utils/constants'
 
 export const getInstance = function(timeout = 30000) {
   let axiosConfig = {

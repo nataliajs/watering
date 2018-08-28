@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
-import * as placesAPI from 'api/places'
+import store from 'store'
+import { getPlaces } from 'actions/places-actions'
 
 import PlacesDashboard from './places-dashboard'
 
@@ -14,18 +14,7 @@ class PlacesDashboardContainer extends React.Component {
   }
 
   componentWillMount(){
-    /*const places = placesAPI.getPlaces();
-    this.setState({...this.state,
-      places: places
-    });*/
-    /*.then(response => {
-        this.setState({...this.state,
-          places: response
-        });
-      })
-      .catch(error => {
-        console.warn(error);
-      })*/
+    store.dispatch(getPlaces());
   }
 
   render() {
